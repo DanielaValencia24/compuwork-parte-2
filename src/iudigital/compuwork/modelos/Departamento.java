@@ -2,6 +2,7 @@ package iudigital.compuwork.modelos;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 public class Departamento {
     private int id;
@@ -48,7 +49,6 @@ public class Departamento {
         for (int i = 0; i <= this.empleados.size() -1 ; i++) {
             Empleado empleadoActual = this.empleados.get(i);
             if(empleadoActual.getId() == idEmpleadoEliminar) {
-                System.out.println("Encontrado");
                 this.empleados.remove(i);
                 return empleadoActual;
             }
@@ -58,9 +58,9 @@ public class Departamento {
 
     public void listarEmpleados() {
         if (empleados.isEmpty()) {
-            System.out.println("⚠️ No hay empleados en el departamento " + nombre);
+            JOptionPane.showMessageDialog(null,"⚠️ No hay empleados en el departamento " + nombre);
         } else {
-            System.out.println("\nEmpleados en el departamento " + nombre + ":");
+            JOptionPane.showMessageDialog(null,"\nEmpleados en el departamento " + nombre + ":");
             for (Empleado e : empleados) {
                 System.out.println(e);
             }

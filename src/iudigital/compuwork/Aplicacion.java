@@ -6,6 +6,7 @@ import iudigital.compuwork.utilidades.MenuOpciones;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.text.NumberFormat;
+import java.time.format.DateTimeFormatter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,7 @@ public class Aplicacion extends JFrame {
         panel.setLayout(new BorderLayout());
 
         // Panel contenedor de botones con dos filas (Departamentos y Empleados)
-        JPanel panelBotones = new JPanel(new GridLayout(2, 1)); // 2 filas, 1 columna
+        JPanel panelBotones = new JPanel(new GridLayout(3, 1)); // 2 filas, 1 columna
 
         // Botones departamentos
         JButton btnListarDepartamentos = new JButton("Listar departamentos");
@@ -63,18 +64,24 @@ public class Aplicacion extends JFrame {
         JButton btnListarTodosLosEmpleados = new JButton("Listar Todos los Empleados");
         JButton btnEliminarEmpleado = new JButton("Eliminar Empleado");
         JButton btnTransferirEmpleado = new JButton("Transferir Empleado");
+        JButton btnGenerarReporteDesempenio = new JButton("Generar reporte de empleado");
 
-        JPanel empleadosButtonPanel = new JPanel();
-        empleadosButtonPanel.add(btnAgregarEmpleadoPermanente);
-        empleadosButtonPanel.add(btnAgregarEmpleadoTemporal);
-        empleadosButtonPanel.add(btnListarEmpleadosPorDepartamento);
-        empleadosButtonPanel.add(btnListarTodosLosEmpleados);
-        empleadosButtonPanel.add(btnEliminarEmpleado);
-        empleadosButtonPanel.add(btnTransferirEmpleado);
+        JPanel empleadosButtonPanel1 = new JPanel();
+        empleadosButtonPanel1.add(btnAgregarEmpleadoPermanente);
+        empleadosButtonPanel1.add(btnAgregarEmpleadoTemporal);
+        empleadosButtonPanel1.add(btnListarEmpleadosPorDepartamento);
+        empleadosButtonPanel1.add(btnListarTodosLosEmpleados);
+        empleadosButtonPanel1.add(btnEliminarEmpleado);
+        
+        JPanel empleadosButtonPanel2 = new JPanel();
+
+        empleadosButtonPanel2.add(btnTransferirEmpleado);
+        empleadosButtonPanel2.add(btnGenerarReporteDesempenio);
 
         // Agregar ambos paneles de botones al contenedor
         panelBotones.add(departamentosButtonPanel);
-        panelBotones.add(empleadosButtonPanel);
+        panelBotones.add(empleadosButtonPanel1);
+        panelBotones.add(empleadosButtonPanel2);
 
         // Añadir paneles al frame
         panel.add(panelBotones, BorderLayout.NORTH);
@@ -95,6 +102,7 @@ public class Aplicacion extends JFrame {
         btnEliminarEmpleado.addActionListener(e -> eliminarEmpleado());
         btnTransferirEmpleado.addActionListener(e -> transferirEmpleado());
         btnListarTodosLosEmpleados.addActionListener(e -> listarTodosLosEmpleados());
+        btnGenerarReporteDesempenio.addActionListener(e -> generarReporteDesempenio());
 
         formatearDepartamentos();
        // int opcionElegida;
@@ -131,11 +139,29 @@ public class Aplicacion extends JFrame {
         displayArea.setText(sb.toString());
     }
     
+    public void generarReporteDesempenio() {
+        int id = MenuOpciones.mostrarMenuIdentificadorNumerico("para el empleado");
+        Empleado empleado = sistemaGestion.buscarEmpleado(id);
+
+        if (empleado == null) {
+            JOptionPane.showMessageDialog(this,"⚠️ El empleado con el ID " + id + " no existe en el sistema");
+            return;
+        }
+        
+        ReporteDesempenioEmpleado reporte = MenuOpciones.mostrarMenuConstruccionReporteDesempenioEmpleado();
+        empleado.setReporteDesempenio(reporte);
+        
+        formatearDepartamentos();
+        
+        JOptionPane.showMessageDialog(this, "✔ Reporte de desempenio generado exitosamente");
+    }
+    
     public void formatearEmpleados(List<Empleado> empleados) {
         StringBuilder sb = new StringBuilder();
         NumberFormat formatoMoneda = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
-
-        for (Empleado e : empleados) {
+        DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("d 'de' MMMM 'de' yyyy", new Locale("es", "ES"));
+        List<Empleado> empleadosOrdenados = empleados.stream().sorted((e1, e2) -> e1.getId() - e1.getId()).toList();
+        for (Empleado e : empleadosOrdenados) {
             if (e instanceof EmpleadoTemporal) {
                 EmpleadoTemporal et = (EmpleadoTemporal) e;
                 sb.append("--- Empleado Temporal ---\n");
@@ -143,6 +169,16 @@ public class Aplicacion extends JFrame {
                 sb.append("Nombre: ").append(et.getNombre()).append("\n");
                 sb.append("Salario: ").append(formatoMoneda.format(et.getSalario())).append("\n");
                 sb.append("Duración contrato: ").append(et.getDuracionContrato()).append(" meses\n");
+                
+                if (e.getReporteDesempenio() != null) {
+                    ReporteDesempenioEmpleado reporte = e.getReporteDesempenio();
+                    String fechaFormateada = reporte.getFechaGeneracion().format(formatoHora);
+                    sb.append(" --- Ultimo reporte de desempenio: \n")
+                            .append("\t Fecha de generacion: " + fechaFormateada + " | ");
+                    sb.append("Calificacion obtenida: " + reporte.getCalificacion());
+                } else {
+                    sb.append(" --- Ultimo reporte de desempenio: \n").append("No encontrado");
+                }
             } else if (e instanceof EmpleadoPermanente) {
                 EmpleadoPermanente ep = (EmpleadoPermanente) e;
                 sb.append("--- Empleado Permanente ---\n");
@@ -150,8 +186,17 @@ public class Aplicacion extends JFrame {
                 sb.append("Nombre: ").append(ep.getNombre()).append("\n");
                 sb.append("Salario: ").append(formatoMoneda.format(ep.getSalario())).append("\n");
                 sb.append("Beneficios: ").append(formatoMoneda.format(ep.getBeneficios())).append("\n");
+                if (e.getReporteDesempenio() != null) {
+                    ReporteDesempenioEmpleado reporte = e.getReporteDesempenio();
+                    String fechaFormateada = reporte.getFechaGeneracion().format(formatoHora);
+                    sb.append(" --- Ultimo reporte de desempenio: \n")
+                            .append("\t Fecha de generacion: " + fechaFormateada + " | ");
+                    sb.append("Calificacion obtenida: " + reporte.getCalificacion());
+                } else {
+                    sb.append(" --- Ultimo reporte de desempenio: \n").append("No encontrado");
+                }
             }
-            sb.append("\n");
+            sb.append("\n\n\n");
         }
 
         displayArea.setText(sb.toString());
@@ -188,10 +233,6 @@ public class Aplicacion extends JFrame {
 
         sistemaGestion.agregarDepartamento(nuevoDepartamento);
         formatearDepartamentos();
-    }
-
-    private void listarDepartamentos() {
-        sistemaGestion.listarDepartamentos();
     }
 
     private void actualizarDepartamento() {
@@ -262,7 +303,7 @@ public class Aplicacion extends JFrame {
             return;
         }
 
-        int idDepartamentoDestino = MenuOpciones.mostrarMenuIdentificadorNumerico("del departamento de destino: ");
+        int idDepartamentoDestino = MenuOpciones.mostrarMenuIdentificadorNumerico("del departamento de destino");
         Departamento departamentoDestino = sistemaGestion.buscarPorId(idDepartamentoDestino);
 
         if (departamentoDestino == null) {
@@ -278,9 +319,9 @@ public class Aplicacion extends JFrame {
 
         Empleado empleadoEliminado = departamentoOrigen.eliminarEmpleado(idEmpleadoTranferir);
         departamentoDestino.agregarEmpleado(empleadoEliminado);
-    
+        
         formatearDepartamentos();
-
+        JOptionPane.showMessageDialog(this, "Empleado " + empleadoEliminado.getNombre() + " transferido con exito al departamento " + departamentoDestino.getNombre());
     }
 
     private void listarTodosLosEmpleados() {

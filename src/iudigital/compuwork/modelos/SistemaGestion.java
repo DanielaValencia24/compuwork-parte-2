@@ -3,6 +3,7 @@ package iudigital.compuwork.modelos;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class SistemaGestion {
     private List<Departamento> departamentos;
@@ -25,23 +26,12 @@ public class SistemaGestion {
             }
         }
         if (existe) {
-            System.out.println("⚠️ El departamento con el id " + departamento.getId() + " ya existe.");
+            JOptionPane.showMessageDialog(null,"⚠️ El departamento con el id " + departamento.getId() + " ya existe.");
             return;
         }
         this.departamentos.add(departamento);
 
-        System.out.println("✅ Departamento agregado.");
-    }
-
-    public void listarDepartamentos() {
-        if (this.departamentos.isEmpty()) {
-            System.out.println("⚠️ No hay departamentos registrados.");
-        } else {
-            System.out.println("\n\nImprimiendo lista de Departamentos:");
-            for (Departamento departamentoActual : this.departamentos) {
-                System.out.println(departamentoActual);
-            }
-        }
+        JOptionPane.showMessageDialog(null,"✅ Departamento agregado.");
     }
 
     public Departamento buscarPorId(int idDepartamentoActualizar) {
@@ -104,6 +94,20 @@ public class SistemaGestion {
         }
         return false;
     }
+    
+        
+    public Empleado buscarEmpleado(int idEmpleado) {
+        for (Departamento departamentoActual : this.departamentos) {
+               for (Empleado empleado: departamentoActual.getEmpleados()) {
+                   if (empleado.getId() == idEmpleado) {
+                       return empleado;
+                   }
+               }
+          }
+     
+        return null;
+    }
+    
     
     @Override
     public String toString() {
