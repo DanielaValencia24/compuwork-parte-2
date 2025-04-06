@@ -1,11 +1,12 @@
 package iudigital.compuwork.modelos;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Departamento {
     private int id;
     private String nombre;
-    private final ArrayList<Empleado> empleados;
+    private List<Empleado> empleados;
 
     public Departamento(int id, String nombre) {
         this.id = id;
@@ -21,7 +22,7 @@ public class Departamento {
         return nombre;
     }
 
-    public ArrayList<Empleado> getEmpleados() {
+    public List<Empleado> getEmpleados() {
         return empleados;
     }
 
@@ -37,7 +38,7 @@ public class Departamento {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
     public void agregarEmpleado(Empleado empleado) {
         empleados.add(empleado);
         System.out.println("✅ Empleado asignado al departamento " + nombre);

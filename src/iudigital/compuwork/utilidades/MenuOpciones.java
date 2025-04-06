@@ -6,45 +6,11 @@ import iudigital.compuwork.modelos.Empleado;
 import iudigital.compuwork.modelos.EmpleadoPermanente;
 import iudigital.compuwork.modelos.EmpleadoTemporal;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class MenuOpciones {
 
-    public static int mostrarMenuPrincipal() {
-        int opcionMenuGeneral = 0;
-        Scanner scanner = new Scanner(System.in);
-        do {
-            System.out.println("""
-                    \n\n--- Menú Principal ---
-                    1. Crear departamento
-                    2. Listar departamentos
-                    3. Actualizar departamento
-                    4. Eliminar departamento
-                    5. Agregar empleado permanente
-                    6. Agregar empleado temporal
-                    7. Listar empleados por departamento
-                    8. Eliminar empleado de departamento
-                    9. Transferir empleado de un departamento a otro
-                    10. Listar todos los empleados por departamento
-                    0. Salir""");
-            System.out.print("Seleccione una opción: ");
-
-            try {
-                opcionMenuGeneral = scanner.nextInt();
-            } catch (Exception e) {
-                System.out.println("Ingrese un valor numérico válido, intente nuevamente.");
-                scanner.nextLine();
-            }
-
-            if(opcionMenuGeneral <0 || opcionMenuGeneral > 10) {
-                System.out.println("\n *** Opción no válida *** \n");
-            }
-
-        } while(opcionMenuGeneral <0 || opcionMenuGeneral > 10);
-
-
-        return opcionMenuGeneral;
-    }
+    
 
     public static Departamento mostrarMenuConstruccionDepartamento() {
         System.out.println("\n\n--- Menú de Creación de Departamento ---");
@@ -79,15 +45,12 @@ public class MenuOpciones {
 
     public static int mostrarMenuIdentificadorNumerico(String complemento) {
         int id = -1;
-        Scanner scanner = new Scanner(System.in);
 
         do {
-            System.out.print("Ingrese un identificador numérico " + complemento + ": ");
             try {
-                id = scanner.nextInt();
+                id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un identificador numérico valido " + complemento + ":"));
             } catch (Exception e) {
                 System.out.println("Ingrese un valor numérico válido, intente nuevamente.");
-                scanner.nextLine();
                 id = -1;
             }
         } while (id <= 0);
@@ -97,10 +60,9 @@ public class MenuOpciones {
 
     public static String mostrarMenuNombre() {
         String nombre;
-        Scanner scanner = new Scanner(System.in);
         do {
             System.out.print("Ingrese un nombre: ");
-            nombre = scanner.nextLine();
+            nombre = JOptionPane.showInputDialog("Ingrese un nombre: ");
         } while (nombre.isBlank());
 
         return nombre.trim();
@@ -108,14 +70,12 @@ public class MenuOpciones {
 
     private static float mostrarMenuSalario() {
         float salario = 0;
-        Scanner scanner = new Scanner(System.in);
         do {
             System.out.print("Ingrese el salario: ");
             try {
-                salario = scanner.nextFloat();
+                salario = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el salario: "));
             } catch (Exception e) {
                 System.out.println("Debe ingresar un valor válido para el salario");
-                scanner.nextLine();
             }
         } while (salario <= 0);
 
@@ -124,14 +84,12 @@ public class MenuOpciones {
 
     private static float mostrarMenuBeneficios() {
         float beneficios = 0;
-        Scanner scanner = new Scanner(System.in);
         do {
             System.out.print("Ingrese el valor de los beneficios: ");
             try {
-                beneficios = scanner.nextFloat();
+                beneficios = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el valor de los beneficios: "));
             } catch (Exception e) {
                 System.out.println("Debe ingresar un valor válido para los beneficios");
-                scanner.nextLine();
             }
         } while (beneficios <= 0);
 
@@ -140,14 +98,12 @@ public class MenuOpciones {
 
     private static int mostrarMenuDuracionMeses() {
         int duracionMeses = 0;
-        Scanner scanner = new Scanner(System.in);
         do {
             System.out.print("Ingrese el valor de los meses de duración del contrato: ");
             try {
-                duracionMeses = scanner.nextInt();
+                duracionMeses = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la duracion en meses: "));
             } catch (Exception e) {
                 System.out.println("Debe ingresar un valor válido para los meses de duración del contrato");
-                scanner.nextLine();
             }
         } while (duracionMeses <= 0);
 

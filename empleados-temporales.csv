@@ -1,0 +1,101 @@
+id,nombre,salario,duracion_contrato,id_departamento
+1,Flavia Lobato,1742187.25,1,1
+2,Gerónimo Pallarès Sanabria,2615294.06,10,1
+3,Berta de Ribes,1615858.7,8,1
+4,Manola Mendizábal Casado,1455098.52,12,1
+5,Bienvenida Sobrino Marín,3474910.04,11,1
+6,Manola Amaya Pedro,1263561.85,2,1
+7,Sandalio Mariano Amat Esparza,3015998.75,2,1
+8,Herminia Navarrete Codina,2835714.99,6,1
+9,Lupe Oliver Boix,2701533.91,11,1
+10,Samuel Miró Alberola,1768403.4,5,1
+11,Socorro Pozuelo,2674534.03,6,2
+12,Paco Alejo Berrocal Benitez,1247296.34,1,2
+13,Francisca Adelina Garzón Alcalde,1897785.17,12,2
+14,Manuel Tirado-Neira,3148951.59,7,2
+15,Lucía Camacho,3216328.09,11,2
+16,Felisa Arrieta Olivera,2293967.56,11,2
+17,Clotilde Arteaga Blanco,2664538.8,6,2
+18,Valerio Marti Malo,3094135.3,12,2
+19,Yaiza Beatriz Pizarro Godoy,3237033.44,3,2
+20,Cloe Cantón Alcalde,2997541.1,1,2
+21,Segismundo Conesa Amaya,1436631.07,2,3
+22,Heriberto Losada Espada,1448623.88,8,3
+23,Marta Tello Heras,3146231.33,3,3
+24,Guillermo Prat Murcia,2131409.48,1,3
+25,Ágata Lucila Saavedra Roldan,3344880.86,2,3
+26,Almudena Santana,2907537.77,11,3
+27,Emelina Carpio Uribe,3254824.84,4,3
+28,Fabricio Cano,1735063.87,5,3
+29,Herberto Maestre Vives,2070800.81,3,3
+30,Leoncio Rodriguez Mascaró,2161726.59,6,3
+31,Fernanda Giner Porcel,2903742.59,12,4
+32,Josefa Pardo Donaire,1413818.65,2,4
+33,Ángeles Roda Cerezo,2304890.61,9,4
+34,Irma Dafne Sanz Nevado,2723344.57,5,4
+35,Delfina Gabaldón Carballo,2831491.81,9,4
+36,Evelia Acedo Jordá,1812197.03,2,4
+37,Marc de Ochoa,1630586.46,4,4
+38,Rodolfo Guillen Vilalta,2368310.65,12,4
+39,Toribio Collado Abella,3102098.0,11,4
+40,Marcela Burgos Angulo,1964646.91,8,4
+41,Fortunata de Nieto,2784338.06,10,5
+42,Aarón Páez Corbacho,2025875.22,6,5
+43,Maricela Espejo Antón,2801932.86,10,5
+44,Maxi Peiró Sanjuan,3271210.1,4,5
+45,Calixta Navarro-Ortega,1231821.64,2,5
+46,Fátima Pellicer Ramis,1779757.35,11,5
+47,Mauricio Sánchez Baró,3363205.31,8,5
+48,María Régulo Sanjuan Murillo,1404868.68,8,5
+49,Lidia Petrona Criado Rueda,2582927.39,2,5
+50,Ramiro Baños Neira,1825542.9,7,5
+51,Carla del Puerta,2577072.92,7,6
+52,Ulises Inocencio Casal Valenzuela,1914139.81,5,6
+53,Sergio Poza Vara,2581860.26,11,6
+54,Ángeles Sarabia Vicente,1492107.33,6,6
+55,Soledad Franch-Uriarte,1261413.51,11,6
+56,Victoriano del Revilla,3431962.59,3,6
+57,Danilo Castañeda Cantón,2214196.0,6,6
+58,Ale Roma-Agullo,1205547.81,5,6
+59,Filomena Torralba Mínguez,1779609.79,7,6
+60,Fermín Vilaplana-Ochoa,2524578.18,5,6
+61,Hilario Riera Checa,2719934.65,12,7
+62,Porfirio Blazquez-Cantero,3070013.32,9,7
+63,Dionisia Pla-Juliá,2929495.8,1,7
+64,Melania Quesada Villegas,2397928.46,12,7
+65,Laura Barroso Busquets,2560430.35,1,7
+66,Luis Ángel Checa Márquez,3119380.95,11,7
+67,Olimpia García Fernandez,2312233.62,11,7
+68,Curro Escrivá Seco,2534829.42,3,7
+69,Fortunato Jordá Bayón,1826324.74,4,7
+70,Yago Valbuena Uribe,2111724.99,6,7
+71,Gabriela Huertas Carrillo,1885533.87,7,8
+72,Anunciación del Blanes,1543536.07,6,8
+73,Óscar Losada Nevado,1513103.95,9,8
+74,Domingo Fonseca,1690316.92,4,8
+75,Eustaquio Ramón Pagès,1643701.61,8,8
+76,Felipa Royo,1547736.96,7,8
+77,Toño de Arias,3265447.74,8,8
+78,Flor Ferrero Oliver,1964201.1,4,8
+79,Maximiliano Nicolás Merino Feijoo,2225911.51,1,8
+80,Agapito Falcón-Piñeiro,3161908.2,6,8
+81,Gema Coello-Losa,1260471.73,12,9
+82,Juan Antonio Óscar Prada Díaz,1490446.28,10,9
+83,Yésica del Olmo,2426397.0,3,9
+84,Augusto Borja,3097362.13,7,9
+85,León Jose Carlos Ribera Mayol,2453874.93,10,9
+86,Xavier Arnau Ayllón,2716139.08,12,9
+87,Sara Gomis Font,2429199.52,6,9
+88,Agapito Gallart,2150689.5,2,9
+89,Macarena Andreu Enríquez,1998278.17,9,9
+90,Yésica Capdevila-Benito,1991861.08,9,9
+91,Silvio de Rodrigo,1276509.02,2,10
+92,Asunción Francisco Lopez,3456939.91,4,10
+93,Emma de Salamanca,2037607.64,9,10
+94,Coral Casanovas Parra,3430228.66,11,10
+95,Guadalupe Llano Montesinos,2770422.1,9,10
+96,Elisabet de Macias,1950241.02,7,10
+97,Rosenda Durán,3466877.82,6,10
+98,Primitiva Pepita Tovar Alemany,3033296.68,10,10
+99,Joel Llabrés Bernat,1794930.98,10,10
+100,Faustino Miralles Cornejo,3358058.34,7,10

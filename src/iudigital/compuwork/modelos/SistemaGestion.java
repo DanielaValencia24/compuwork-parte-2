@@ -104,6 +104,11 @@ public class SistemaGestion {
         }
         return false;
     }
+    
+    @Override
+    public String toString() {
+        return String.join("\n", departamentos.stream().map((d) -> d.toString()).toList());
+    }
 
 //    private static void listarEmpleados() {
 //        if (empleados.isEmpty()) {
@@ -157,4 +162,5 @@ public class SistemaGestion {
 //            }
 //        }
 //    }
+
 }

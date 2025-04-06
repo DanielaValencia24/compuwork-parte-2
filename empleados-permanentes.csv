@@ -1,0 +1,101 @@
+id,nombre,salario,beneficios,id_departamento
+101,Natanael Juliá Gisbert,2587251.16,252631.54,1
+102,Nydia Mir Barberá,4951430.45,790338.51,1
+103,Alcides Bustamante Bru,4090352.25,945429.7,1
+104,Griselda de Palomares,5737484.23,394326.79,1
+105,Jafet Pla Talavera,5904588.12,551926.53,1
+106,Chuy de Torrents,2799004.5,346972.37,1
+107,Angelita Múgica Arjona,3026395.12,496087.17,1
+108,Carla Contreras Cánovas,2664097.65,435156.85,1
+109,Adelaida Carro Toledo,4896075.11,705182.54,1
+110,Clara Santamaría Rios,4046902.56,749571.42,1
+111,Zaira Viñas Galván,2701453.72,490345.31,2
+112,Perlita Eva Figueras Segura,3008640.37,228012.4,2
+113,Evita Lucena Mora,4285290.15,399913.03,2
+114,Loida Carranza-Alcaraz,4683814.53,902939.66,2
+115,Édgar Macías Calzada,5823110.0,578075.14,2
+116,Jacobo Roca-Alcántara,4249956.72,538546.3,2
+117,Ruperta Castrillo-Segovia,5030986.27,452725.21,2
+118,Mateo de Mesa,5248824.67,617303.11,2
+119,Abraham Madrid-Bauzà,3174418.66,285695.62,2
+120,María Del Carmen Fiol Ferrández,4786788.46,795683.05,2
+121,Paula Sobrino Anguita,3676478.26,424566.35,3
+122,Ernesto Hernández Maestre,3703813.09,908670.95,3
+123,Lourdes del Cordero,4211828.56,972373.51,3
+124,Severino Jover,4656226.0,420662.69,3
+125,Hilda Guillen,5313106.57,440731.6,3
+126,Almudena Rincón Gabaldón,2712281.53,727615.04,3
+127,Hilario Fabregat Canales,5872380.0,832622.15,3
+128,Isidro Romero-Pineda,5225901.47,225728.43,3
+129,Miguela Magdalena Izaguirre Comas,3651793.94,310314.95,3
+130,Susana Yuste-Palacios,3118253.91,685238.66,3
+131,José Ángel Leocadio Jaén Leon,4089930.26,583572.88,4
+132,Evita Vega Matas,2962163.25,287653.98,4
+133,María Del Carmen Piñol Batlle,4916137.71,371077.83,4
+134,Martirio del Domínguez,3296586.81,667045.41,4
+135,Griselda Cerezo-Oliver,4407754.68,554967.47,4
+136,Cebrián Cantón Alberto,5630317.31,473280.66,4
+137,Valero Francisco Ropero,3087270.09,930956.62,4
+138,Emigdio Bárcena,3935053.25,438283.98,4
+139,Maximiano Noguera Iglesia,3803723.67,668129.68,4
+140,Jesús Gaya Durán,4743269.05,300965.77,4
+141,Julio Doménech Bru,5883875.78,550038.86,5
+142,Balduino Sabas Ariza Pacheco,5684878.51,865780.53,5
+143,Blas Sala Vallejo,2888310.68,845641.18,5
+144,Elpidio Bilbao Pinilla,5431345.38,709239.72,5
+145,Pelayo Murillo Lumbreras,5156047.18,291979.18,5
+146,Abraham Lluch Ávila,4424647.28,860070.74,5
+147,Irma Bernad,4242410.24,500876.29,5
+148,Hilda María Ángeles Robledo Alcalá,5363048.63,435047.91,5
+149,Marita Alcaraz,5833087.07,420908.18,5
+150,Vidal Peláez Vilalta,5925574.01,819017.79,5
+151,Sonia Silvia Marqués Becerra,4734164.48,471212.57,6
+152,Baldomero Saavedra Bas,4564095.85,250190.82,6
+153,Isidoro Belda Barberá,5997591.69,523468.26,6
+154,Ernesto Castro Gomila,2528700.79,362615.38,6
+155,Pelayo Lucas Adán Machado,3316808.99,659129.58,6
+156,Melania Soriano,5749985.66,239537.9,6
+157,Tito Frías,3745098.32,764038.07,6
+158,Jimena Nevado-Alcázar,4277664.5,677205.21,6
+159,Cornelio Villegas Amador,4492040.77,940925.96,6
+160,Diana Rueda Valenzuela,5206823.33,788215.38,6
+161,Crescencia Goñi,4689846.66,391776.63,7
+162,Fidel del Samper,4121450.86,806182.03,7
+163,Feliciano Tejedor Figueras,4772453.85,457038.9,7
+164,Ismael del Ribas,2854891.72,464433.57,7
+165,Modesta Iglesias Cruz,4985379.17,870110.52,7
+166,Anunciación Cañellas Rosselló,3730903.34,723881.89,7
+167,Arturo del Lorenzo,4374280.02,951323.34,7
+168,Alma de Almazán,5243473.15,582316.22,7
+169,Elba Marí Barral,2985231.03,285059.3,7
+170,Noé Madrigal Céspedes,4418164.76,319682.49,7
+171,Fermín Alegria,5639904.0,748696.9,8
+172,Rosalinda Carvajal Arnaiz,4553040.8,405350.6,8
+173,Manuel Español,3349981.39,749700.53,8
+174,Julie Clemente Alcázar,5356775.58,529554.01,8
+175,Maricruz Amor Verdú,3867469.89,522880.31,8
+176,Zacarías Perelló Gárate,4523310.71,452381.28,8
+177,Albert Caparrós,5601493.2,379364.86,8
+178,Asdrubal Báez Gárate,5843646.8,392832.08,8
+179,Georgina del Santana,5427375.74,841858.55,8
+180,Raquel Galvez-Barranco,4944130.73,459853.55,8
+181,Salomón Bayo Castejón,3982864.1,556793.65,9
+182,Abraham Herminio Aguilera Puga,3995804.32,580742.74,9
+183,César Nazaret Adadia Sanmiguel,4434453.05,858379.72,9
+184,Gervasio Pareja Murcia,3535589.35,945783.78,9
+185,Aitana de Alarcón,4980811.51,745779.97,9
+186,Anastasio Duarte Rivero,5563555.39,691878.55,9
+187,Javier Chacón,4620646.45,734034.85,9
+188,Natanael Coello-Rocamora,5219634.71,364324.55,9
+189,Elena Cortes Vazquez,3535580.07,430637.03,9
+190,Aurelia Coello Boada,3036964.06,621347.36,9
+191,Leticia Nicolau-Losa,2575115.39,386079.91,10
+192,Víctor Rozas Lucas,5708601.18,814061.95,10
+193,Samanta Rincón Batlle,3621231.48,979878.69,10
+194,Silvestre Sancho Menéndez,3013385.86,688044.56,10
+195,Marcelo Bayo-Carrión,4582055.31,533442.43,10
+196,Juan Bautista Busquets Borrell,2908050.24,690320.2,10
+197,Augusto Izaguirre Diaz,5149573.58,982180.36,10
+198,Pili Sobrino Gomez,5490602.22,800301.48,10
+199,Dani Múgica Dominguez,4583636.78,870831.14,10
+200,Lalo Rodríguez Sureda,4894755.01,340102.73,10
